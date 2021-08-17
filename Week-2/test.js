@@ -1,7 +1,0 @@
-function hello(){
-
-};
-
-function hello(){
-
-};

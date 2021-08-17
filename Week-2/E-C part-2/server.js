@@ -16,3 +16,14 @@ mongoose.connect('mongodb://localhost:27017/eStore',
   },
   ()=> console.log("Connected to the DB")
 )
+
+app.use("/eStore", require("./routes/inventory.js"))
+
+app.use((err, req, res, next) => {
+  console.log(err)
+    return res.send({errMsg: err.message})
+})
+
+app.listen(9000, () => { 
+    console.log("The App is listening on port 9000")
+});
