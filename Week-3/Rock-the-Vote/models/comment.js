@@ -10,7 +10,7 @@ newComment: {
 user:{
     type:Schema.Types.ObjectId,
     ref:"User",
-    required: ture
+    required: true
 },
 
 })

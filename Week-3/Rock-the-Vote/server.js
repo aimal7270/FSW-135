@@ -18,6 +18,9 @@ mongoose.connect('mongodb://localhost:27017/Rock-the-Vote',
 )
 
 app.use("/auth", require("./routes/authRouter.js"))
+app.use("/comments", require("./routes/commentRouter.js"))
+app.use("/issues", require("./routes/issueRouter.js"))
+app.use("/users", require("./routes/userRouter.js"))
 
 app.use((err, req, res, next) => {
   console.log(err)
