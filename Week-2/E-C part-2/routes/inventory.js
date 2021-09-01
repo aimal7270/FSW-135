@@ -1,6 +1,6 @@
 const express = require('express')
 const storeRouter = express.Router()
-const Inventory = require('../models/inventorySchema')
+const Inventory = require('../Model/inventorySchema')
 
 // Get All
 storeRouter.get("/", (req, res, next) => {
