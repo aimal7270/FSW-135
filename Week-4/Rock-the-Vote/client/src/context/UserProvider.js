@@ -18,7 +18,7 @@ export default function UserProvider(props) {
     userComments: [],
     issueComments: [],
 
-    function signup(credentials) {
+    function :signup(credentials) {
         axios
           .post("/auth/signup", credentials)
           .then((res) => {
