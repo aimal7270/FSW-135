@@ -30,7 +30,7 @@ export default function IssueThreads(props){
                 name="issue" 
                 value={issue} 
                 onChange={handleChange}> 
-                <option value="Women's Rights">Women's Rights</option>
+                <option value="human's Rights">human's Rights</option>
                 <option value="Voting Rights">Voting Rights</option>
                 <option value="Term Limits">Term Limits</option>
                 <option value="Social Security">Social Security</option>
