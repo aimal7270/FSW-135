@@ -17,10 +17,10 @@ export default function UserProvider(props) {
     issues: [],
     userComments: [],
     issueComments: [],
-
-    function :signup(credentials) {
+  }
+    function signup(credentials) {
         axios
-          .post("/auth/signup", credentials)
+           .post("/auth/signup", credentials)
           .then((res) => {
             const { user, token } = res.data;
             localStorage.setItem("token", token);
@@ -163,5 +163,6 @@ export default function UserProvider(props) {
         >
         {props.children}
         </UserContext.Provider>
-      );
-    
+      )
+      
+      }
