@@ -1,0 +1,191 @@
+* {
+ 
+    margin: 0;
+    padding: 0;
+    font-family: monospace ;
+    background-image: url(https://s7d2.scene7.com/is/image/TWCNews/Getty_Vote_Ballot_Election);
+    background-size: cover;
+  }
+  
+  .app {
+   padding: 10px;
+   box-sizing: border-box;
+   border: 1px ridge rgb(83, 83, 83);
+   height: 380px;
+  }
+  a:hover{ 
+    color:#5f5f06;
+  }
+  a{
+    color: rgb(238, 30, 30);
+    font-size: 20px;
+    margin: 16px;
+    text-decoration: underline;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px #d90429;
+    display: inline-block;
+    align-items: center;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20px;
+    
+    
+  }
+  .button:hover{
+    color: #f8f8ed;
+   
+  }
+  .button{
+    color: rgb(241, 224, 224);
+    margin: 10px;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 20px 30px 20px;
+    box-shadow:  0 0 6px #d90429;
+    text-shadow: 1px 1px 1px #d90429;
+    display: inline-block;
+    align-items: center;
+    background-color: rgb(238, 234, 234);
+  }
+  
+  .auth-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  ;
+  }
+  .auth-container > h1:hover{
+    color: whitesmoke ;
+    text-shadow: 2px 2px 2px #d90429;
+    letter-spacing: 5px ;
+  }
+  .auth-container > h1::first-letter{
+    font-size:180px;
+  }
+  .auth-container > h1 {
+    font-size: 80px;
+    margin: 24px;
+    color: #d90429;
+    text-shadow: 1px 1px whitesmoke;
+    font-size: 115px;
+    box-shadow: inset 0 0 10px whitesmoke;
+    border-radius: 10px;
+    display: inline-block;
+    align-items: center;
+  }
+  
+  .auth-container > p {
+    margin: 16px;
+    text-decoration: underline;
+    font-size: 30px;
+    box-shadow:  0 0 3px whitesmoke;
+    color: whitesmoke;
+    text-shadow: 1px 1px #d90429;
+  }
+  
+  .auth-container > form {
+    border: 1px solid whitesmoke;
+    padding: 60px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:  0 0 13px whitesmoke;
+  }
+  .auth-container > form > input:focus{
+    color: #ffff3f;
+  }
+  .auth-container > form > input {
+    margin: 18px 8px;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow:  0 0 3px whitesmoke;
+    display: inline-block;
+    align-items: center;
+    
+      color: rgb(196, 34, 34);
+  }
+  .auth-container > form > button:hover{
+    color:#1b1b11;
+  }
+  .auth-container > form > button {
+    margin: 16px 8px;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow:  0 0 3px rgb(98, 17, 17);
+  }
+  
+  
+  
+  
+  
+  .profile > h1 {
+    margin: 50px;
+    font-size: 70px;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px #d90429;
+    width: 60%;
+    position: relative;
+    left: 20%;
+    top:20%;
+  }
+  .profile > h3:hover{
+    color:#ffff3f;
+    text-shadow: 1px 1px whitesmoke;
+  
+  }
+  .profile > h3 {
+    margin: 16px ;
+    text-decoration: underline;
+    font-size: 25px;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px#d90429;
+    position: relative;
+    left: 40%;
+    top:30%;
+    width: 20%;
+    letter-spacing: 2px;
+  }
+  
+  button{
+  color: rgb(204, 69, 7);
+  }
+  .bttn:hover{
+    color:
+    #2a6906;
+  }
+  .bttn{
+    color: rgb(107, 5, 5);
+    padding: 6px;
+    margin-top: 15px;
+  }
+  .ft-name{  
+    color: #3f7cff;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    left: 40%;
+    top: 30px;
+    text-decoration: underline;
+  }
+  .material-icons{
+    color:#d90429;
+    font-size: 38px;
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    left: 40%;
+  }
+  #smiley{
+    font-size: 32px;
+    display: inline-block;
+    position: relative;
+    top: 70px;
+    left: 30%;
+    color:rgb(54, 3, 3);
+  }
+  
