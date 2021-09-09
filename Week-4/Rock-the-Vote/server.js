@@ -22,7 +22,7 @@ mongoose.connect('mongodb://localhost:27017/rockthevotedb',
 
 // ROUTES
 app.use('/auth', require('./routes/authRouter'))
-app.use('/api', expressJwt({ secret: process.env.SECRET, algorithms: ['RS256'] })) 
+app.use('/api', expressJwt({ secret: process.env.SECRET, algorithms: ['H256'] })) 
 app.use('/api/user', require('./routes/userRouter.js'))
 app.use('/api/issue', require('./routes/issueRouter'))
 app.use('/api/comment', require('./routes/commentRouter.js'))
@@ -39,6 +39,6 @@ app.use((err, req, res, next) => {
 })
 
 // SERVER PORT
-app.listen(3000, () => {
-    console.log('Server is running on Port 3000')
+app.listen(9000, () => {
+    console.log('Server is running on Port 9000')
 })
