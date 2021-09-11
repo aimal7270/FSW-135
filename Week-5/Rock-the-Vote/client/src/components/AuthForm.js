@@ -8,7 +8,8 @@ export default function AuthForm(props){
     errMsg,
     inputs: {
       username,
-      password
+      password,
+      email
     } 
   } = props
   
@@ -20,6 +21,12 @@ export default function AuthForm(props){
         name="username" 
         onChange={handleChange} 
         placeholder="Username"/>
+        <input 
+        type="email" 
+        value={email} 
+        name="email" 
+        onChange={handleChange} 
+        placeholder="email"/>
       <input 
         type="text" 
         value={password} 
