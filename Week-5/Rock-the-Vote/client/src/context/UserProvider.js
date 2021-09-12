@@ -11,13 +11,16 @@ userAxios.interceptors.request.use((config) => {
 });
 
 export default function UserProvider(props) {
+
+  //localStorage.removeItem("user")
+  //localStorage.removeItem("token")
+  
   const initState = {
     user: JSON.parse(localStorage.getItem("user")) || {},
     token: localStorage.getItem("token") || "",
     issues: [],
     userComments: [],
     issueComments: [],
-
     userIssues: [],
     username: "",
     errMsg: "",
@@ -56,10 +59,16 @@ export default function UserProvider(props) {
   }
 
   function login(credentials) {
+
+    console.log('inside login - UserProvider', credentials)
+
     axios
       .post("/auth/login", credentials)
       .then((res) => {
         const { user, token } = res.data;
+
+        console.log('token: ', token)
+
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(user));
         getUserIssues();
@@ -84,7 +93,7 @@ export default function UserProvider(props) {
 
   function addIssue(newIssue) {
     userAxios
-      .post("/api/issues/", newIssue)
+      .post("/api/issue/", newIssue)
       .then((res) => {
         setUserState((prevState) => ({
           ...prevState,
@@ -96,7 +105,7 @@ export default function UserProvider(props) {
 
   function getUserIssues() {
     userAxios
-      .get("/api/issues")
+      .get("/api/issue")
       .then((res) => {
         //assigns res.data to issues to populate context
         setUserState((prevState) => ({

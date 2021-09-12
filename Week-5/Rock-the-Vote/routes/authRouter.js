@@ -91,7 +91,8 @@ authRouter.post("/signup", (req, res, next) =>{
 //login
 authRouter.post("/login", (req, res, next) => {
     console.log('req.body.username: ', req.body.username)
-    User.findOne({ username: req.body.username.toLowerCase() }, (err, user) => {
+    User.findOne({ username: req.body.username }, (err, user) => {
+    //User.findOne({ username: "Akhan1" }, (err, user) => {
         if(err){
             res.status(500)
             return next(err)

@@ -13,7 +13,8 @@ export default function UserIssue(props) {
   return (
     <div key={_id} id={_id} className="issue">
       <h2>{topic}</h2>
-      <img src={imgUrl} width="300" height="300" alt="thisisapicture" />
+      <img src = {imgUrl} 
+      width="300" height="300"  alt="thisisapicture" />
       <br />
       <span>Posted By: {username}</span>
       <span> Posted: {Date(postDate)}</span>
