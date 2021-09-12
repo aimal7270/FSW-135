@@ -104,6 +104,7 @@ authRouter.post("/login", (req, res, next) => {
             return next(new Error('Invalid Credentials'))
         }
         const token = jwt.sign(user.toObject(), process.env.SECRET)
+        return res.status(200).send({token, user})
     })
 })
 
