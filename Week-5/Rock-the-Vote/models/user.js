@@ -11,9 +11,9 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  email: {
-  type: String,
-  required: false,
+  memberSince: {
+  type: Date,
+  default: Date.now
 }
 
 })

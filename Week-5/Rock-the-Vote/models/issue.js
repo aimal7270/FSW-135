@@ -3,13 +3,31 @@ const Schema = mongoose.Schema
 
 const issueSchema = new Schema({
     
-    title: {
+    topic: {
         type: String,
         required: true 
     },
     description: {
         type: String,
         required: true
+    },
+    imgUrl: {
+        type: String,
+        required: true
+    },
+    postDate: {
+        type: Date,
+        default: Date.now()
+    },
+    likes: {
+        type: String,
+        required: true,
+        default: 0
+    },
+    dislikes: {
+        type: String,
+        required: true,
+        default: 0
     }
 })
 

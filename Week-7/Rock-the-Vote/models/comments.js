@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+
+//Comment Schema
 const commentSchema = new Schema({
-    
     commentDate: {
         type: Date,
         default: Date.now
@@ -21,6 +22,4 @@ const commentSchema = new Schema({
     }
 })
 
-
-
-module.exports = mongoose.model( "Comment", commentSchema )
+module.exports = mongoose.model("Comment", commentSchema)

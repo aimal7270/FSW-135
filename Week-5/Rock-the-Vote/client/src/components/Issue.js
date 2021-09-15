@@ -9,6 +9,8 @@ export default function Issue (props) {
   
   const {username, getCommentsForIssue, issueComments, getUserName, addLike, addDislike, getUserIssues} = useContext(UserContext)
   const { topic, _id, imgUrl, postDate, likes, dislikes } = props
+  console.log(topic, _id, imgUrl, postDate, likes, dislikes)
+  console.log(props)
   function togglePComment () {
     setPComment(prevState => !prevState)
   }
