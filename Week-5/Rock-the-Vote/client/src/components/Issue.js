@@ -8,7 +8,7 @@ export default function Issue (props) {
   const [displayComments, setDisplayComments] = useState(false)
   
   const {username, getCommentsForIssue, issueComments, getUserName, addLike, addDislike, getUserIssues} = useContext(UserContext)
-  const { topic, _id, imgUrl, postDate, likes, dislikes } = props
+  const { topic, _id, imgUrl,description, postDate, likes, dislikes } = props
   console.log(topic, _id, imgUrl, postDate, likes, dislikes)
   console.log(props)
   function togglePComment () {
@@ -36,7 +36,7 @@ export default function Issue (props) {
     <div id={_id} key={_id} className = 'issue'>
 
       <h1>{topic}</h1>
-
+      <h3>{description}</h3>
       <img src={imgUrl} width="350" height="300" alt="thisisapicture"/><br/>
 
       <p>Posted By: @{username}</p>
@@ -46,13 +46,13 @@ export default function Issue (props) {
 
       {displayComments ?
       issueComments.map(comment => <Comment {...comment} key={comment._id} getUserName = {getUserName}/>) : 
-      <button onClick={toggleDispComments}>View Comments</button>}
+      <button onClick={()=>toggleDispComments()}>View Comments</button>}
 
-      {displayComments ? <button onClick={toggleDispComments}>Hide Comments</button> : ""}
+      {displayComments ? <button onClick={()=>toggleDispComments()}>Hide Comments</button> : ""}
 
-      {pComment ? <CommentForm togglePComment = {togglePComment}/> : <button onClick={togglePComment}>Post a Comment</button>}
-      {!displayComments ? <button onClick={addALike}>Like</button> : "" }
-      {!displayComments ? <button onClick={addADislike}>Dislike</button> : ""}
+      {pComment ? <CommentForm togglePComment = {()=>togglePComment()}/> : <button onClick={()=>togglePComment()}>Post a Comment</button>}
+      {!displayComments ? <button onClick={()=>addALike()}>Like</button> : "" }
+      {!displayComments ? <button onClick={()=>addADislike()}>Dislike</button> : ""}
       
       
 

@@ -3,20 +3,22 @@ const Schema = mongoose.Schema
 
 const commentSchema = new Schema({
     
-    commentDate: {
-        type: Date,
-        default: Date.now
+    Comment: {
+        type: String,
+        required: true
+    },
+    username: {
+        type: String,
+        required: true
     },
     user: {
         type: Schema.Types.ObjectId,
-        ref: "User"
+        ref: "User",
+        required: true
     },
-    issue: {
+    issueId: {
         type: Schema.Types.ObjectId,
-        ref: "Issue"
-    },
-    comment: {
-        type: String,
+        ref: "Issue",
         required: true
     }
 })

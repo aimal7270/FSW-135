@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const initInputs = {
-  title: "",
+  topic: "",
   description: "",
   imgUrl: ""
 }
@@ -24,14 +24,14 @@ export default function IssueForm(props){
     setInputs(initInputs)
   }
 
-  const { title, description, imgUrl } = inputs
+  const { topic, description, imgUrl } = inputs
   return (
     <div className = "auth-container">
     <form onSubmit={handleSubmit}>
       <input 
         type="text" 
-        name="title" 
-        value={title} 
+        name="topic" 
+        value={topic} 
         onChange={handleChange} 
         placeholder="Title"/>
       <input 

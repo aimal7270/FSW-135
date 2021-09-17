@@ -1,11 +1,14 @@
-* {
+body, html {
  
     margin: 0;
     padding: 0;
     font-family: monospace ;
     background-image: url(https://s7d2.scene7.com/is/image/TWCNews/Getty_Vote_Ballot_Election);
     background-size: cover;
+    /* background-repeat: no-repeat; */
+    height: 100%;
   }
+
   
   .app {
    padding: 10px;

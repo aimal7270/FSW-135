@@ -29,6 +29,8 @@ export default function UserProvider(props) {
   const [userState, setUserState] = useState(initState);
 
   function handleAuthErr(errMsg) {
+    console.log(errMsg)
+    
     setUserState((prevState) => ({
       ...prevState,
       errMsg,
@@ -44,7 +46,7 @@ export default function UserProvider(props) {
 
   function signup(credentials) {
     axios
-      .post("/auth/signup", credentials)
+      .post("auth/signup", credentials)
       .then((res) => {
         const { user, token } = res.data;
         localStorage.setItem("token", token);
@@ -55,7 +57,8 @@ export default function UserProvider(props) {
           token,
         }));
       })
-      .catch (err => handleAuthErr(err.response.data.errMsg));
+      .catch (err => handleAuthErr(err.response.data.errMsg))
+
   }
 
   function login(credentials) {
@@ -82,8 +85,8 @@ export default function UserProvider(props) {
   }
 
   function logout() {
-    //localStorage.removeItem("token");
-    //localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     setUserState({
       user: {},
       token: "",
@@ -128,10 +131,12 @@ export default function UserProvider(props) {
   }
 
   function getCommentsForIssue(_id) {
+    console.log("COMMENTS", _id)
     userAxios
-      .get(`api/comments/issues/${_id}`)
+      .get(`api/comment/issue/${_id}`)
 
       .then((res) => {
+        console.log("COMMENTS", res)
         setUserState((prevState) => ({
           ...prevState,
           issueComments: res.data,

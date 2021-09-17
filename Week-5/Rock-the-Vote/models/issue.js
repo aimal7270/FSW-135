@@ -8,27 +8,27 @@ const issueSchema = new Schema({
         required: true 
     },
     description: {
-        type: String,
-        required: true
+        type: String
+    },
+    completed: {
+        type: Boolean,
+        default: false
     },
     imgUrl: {
         type: String,
+        // required: true,
+        // default: 
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
         required: true
     },
-    postDate: {
-        type: Date,
-        default: Date.now()
-    },
-    likes: {
+    comment: {
         type: String,
-        required: true,
-        default: 0
-    },
-    dislikes: {
-        type: String,
-        required: true,
-        default: 0
+        required: false
     }
+    
 })
 
 module.exports = mongoose.model( "Issue", issueSchema )
