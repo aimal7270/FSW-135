@@ -3,7 +3,9 @@ import React, { useState } from 'react'
 const initInputs = {
   topic: "",
   description: "",
-  imgUrl: ""
+  imgUrl: "",
+  user: "",
+  Comment: ""
 }
 
 export default function IssueForm(props){
