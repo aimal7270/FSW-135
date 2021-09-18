@@ -6,6 +6,7 @@ const initInputs = {
 }
 export default function CommentForm(props) {
   const [inputs, setInputs] = useState(initInputs)
+  // Need to check here
   const { postComment } = useContext(UserContext)
 
   function handleChange(e) {
@@ -28,12 +29,14 @@ export default function CommentForm(props) {
     <div>
       <form onSubmit={handleSubmit}>
         <input
+          type = "text"
           name="comment"
           value={comment}
           placeholder="New Comment"
           onChange={handleChange} />
-
+        <span>
         <button>Post!</button>
+        </span>
       </form>
       <button onClick={props.togglePComment}>Cancel</button>
     </div>

@@ -17,6 +17,7 @@ export default function Comment(props) {
 
   return (
     <div key={_id} id={_id} className='comment'>
+      <br/>
       <h2>{props.comment}</h2>
       <span>{username}</span>
       <span> Posted: {props.postDate}</span>

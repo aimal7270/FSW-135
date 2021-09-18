@@ -39,7 +39,7 @@ body, html {
     
   }
   .button:hover{
-    color: #f8f8ed;
+    color: #999905;
    
   }
   .button{
@@ -96,29 +96,29 @@ body, html {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    box-shadow:  0 0 13px whitesmoke;
+    box-shadow:  0 0 13px rgb(240, 120, 120);
   }
   .auth-container > form > input:focus{
-    color: #ffff3f;
+    color: #1310db;
   }
   .auth-container > form > input {
     margin: 18px 8px;
     padding: 8px;
     border-radius: 4px;
-    box-shadow:  0 0 3px whitesmoke;
+    box-shadow:  0 0 3px rgb(22, 17, 17);
     display: inline-block;
     align-items: center;
     
-      color: rgb(196, 34, 34);
+      color: rgb(2, 6, 66);
   }
   .auth-container > form > button:hover{
-    color:#1b1b11;
+    color:#040e30;
   }
   .auth-container > form > button {
     margin: 16px 8px;
     padding: 8px;
     border-radius: 4px;
-    box-shadow:  0 0 3px rgb(98, 17, 17);
+    box-shadow:  0 0 3px rgb(247, 119, 119);
   }
   
   
@@ -137,7 +137,7 @@ body, html {
     top:20%;
   }
   .profile > h3:hover{
-    color:#ffff3f;
+    color:#242403;
     text-shadow: 1px 1px whitesmoke;
   
   }
@@ -155,14 +155,16 @@ body, html {
   }
   
   button{
-  color: rgb(204, 69, 7);
+  color: rgb(44, 21, 12);
+  
+  
   }
   .bttn:hover{
     color:
-    #2a6906;
+    #45b404;
   }
   .bttn{
-    color: rgb(107, 5, 5);
+    color: rgb(179, 28, 28);
     padding: 6px;
     margin-top: 15px;
   }

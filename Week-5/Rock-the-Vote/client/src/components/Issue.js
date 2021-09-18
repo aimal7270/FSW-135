@@ -11,6 +11,7 @@ export default function Issue (props) {
   const { topic, _id, imgUrl,description, postDate, likes, dislikes } = props
   console.log(topic, _id, imgUrl, postDate, likes, dislikes)
   console.log(props)
+
   function togglePComment () {
     setPComment(prevState => !prevState)
   }
@@ -22,14 +23,16 @@ export default function Issue (props) {
     }
   }
 
-  function addALike (event) {
+  function addALike (event)  {
     addLike(event)
     getUserIssues()
+    event.preventDefault()
   }
 
   function addADislike (event){
     addDislike(event)
     getUserIssues()
+    event.preventDefault()
   }
 
   return (
@@ -39,7 +42,7 @@ export default function Issue (props) {
       <h3>{description}</h3>
       <img src={imgUrl} width="350" height="300" alt="thisisapicture"/><br/>
 
-      <p>Posted By: @{username}</p>
+      <p>Posted By: {username}</p>
       <p><strong>Likes:</strong> {likes} <strong>Dislikes:</strong> {dislikes}</p><br/>
       <p>Post Date: {Date(postDate)}</p>
       
