@@ -16,10 +16,10 @@ export default function Issue (props) {
     setPComment(prevState => !prevState)
   }
 
-  function toggleDispComments () {
+  function toggleDispComments (id) {
     setDisplayComments(prevState => !prevState)
     if(!displayComments){
-      getCommentsForIssue(_id)
+      getCommentsForIssue(id)
     }
   }
 
@@ -48,12 +48,15 @@ export default function Issue (props) {
       
 
       {displayComments ?
-      issueComments.map(comment => <Comment {...comment} key={comment._id} getUserName = {getUserName}/>) : 
-      <button onClick={()=>toggleDispComments()}>View Comments</button>}
+      issueComments && issueComments.length ?
+      issueComments.map(comment => <Comment {...comment} key={comment._id} getUserName = {getUserName}/>)
+      : ""
+      : 
+      <button onClick={()=>toggleDispComments(_id)}>View Comments</button>}
 
       {displayComments ? <button onClick={()=>toggleDispComments()}>Hide Comments</button> : ""}
 
-      {pComment ? <CommentForm togglePComment = {()=>togglePComment()}/> : <button onClick={()=>togglePComment()}>Post a Comment</button>}
+      {pComment ? <CommentForm issueId = {_id} togglePComment = {()=>togglePComment()}/> : <button onClick={()=>togglePComment()}>Post a Comment</button>}
       {!displayComments ? <button onClick={()=>addALike()}>Like</button> : "" }
       {!displayComments ? <button onClick={()=>addADislike()}>Dislike</button> : ""}
       

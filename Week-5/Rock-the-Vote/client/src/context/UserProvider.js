@@ -133,7 +133,7 @@ export default function UserProvider(props) {
   function getCommentsForIssue(_id) {
     console.log("COMMENTS", _id)
     userAxios
-      .get(`api/comment/issue/${_id}`)
+      .get(`api/comment/issues/${_id}`)
 
       .then((res) => {
         console.log("COMMENTS", res)
@@ -146,13 +146,14 @@ export default function UserProvider(props) {
       .catch((err) => console.log(err.response.data.errMsg));
   }
 
-  function postComment(event, newComment) {
-    const par = event.target.parentNode;
-    const id = par.parentNode.id;
-    newComment.issueId = id;
+  function postComment(issueId, newComment) {
+    // const par = event.target.parentNode;
+    // const id = par.parentNode.id;
+    console.log("New Comment", newComment)
+    newComment.issueId = issueId;
     userAxios
-      .post(`/api/comments`, newComment)
-      .then((res) => console.log(`Added to DB`))
+      .post(`/api/comment/${issueId}`, newComment)
+      .then((req) => console.log(`Added to DB`))
       .catch((err) => console.log(err.response.data.errMsg));
   }
 
